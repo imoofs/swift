@@ -3,16 +3,7 @@
 언어의 높은 수준의 목표 이해하기. 
 
 Swift는 휴대폰, 태블릿, 데스크톱, 서버 또는 코드가 실행되는 모든 환경에 소프트웨어를 작성하는 환상적인 방법입니다.  
-이 언어는 안전하고 빠른 프로그래밍 언어로 현대적인 언어 설계의 장점과 결합되었고 다양한 오픈 소스 커뮤니티의 지혜를 반영하였습니다. 
-
-Swift is friendly to new programmers,
-without sacrificing the power and flexibility
-that experienced programmers need.
-It's an industrial-quality programming language
-that's as expressive and enjoyable as a scripting language.
-The compiler is optimized for performance
-and the language is optimized for development,
-without compromising on either.
+이 언어는 안전하고 빠른 프로그래밍 언어로 현대적인 언어 설계의 장점과 결합되었고 다양한 오픈 소스 커뮤니티의 지혜를 반영하였습니다.
 
 Swift는 숙련된 프로그래머가 필요로 하는 강력함과 유연성을 잃지 않고도, 새로운 프로그래머에게 친숙합니다.   
 산업용 품질의 프로그래밍 언어로 스크립트 언어만큼 표현력이 뛰어나고 즐겁게 사용할 수 있습니다.  
