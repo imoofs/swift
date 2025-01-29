@@ -28,7 +28,7 @@ Swift는 현대적이고 가벼운 문법을 제공하며, 다른 인기 있는 
 그 결과, Swift 코드는 더 쉽게 읽고, 작성하고, 유지보수할 수 있습니다.  
 
 Swift는 지속적으로 발전하며, 강력한 기능과 혁신적인 개선이 이루어지고 있습니다.  
-Swift의 목표는 야심차며, 여러분이 Swift로 무엇을 만들어낼지 기대됩니다! 🚀
+Swift의 목표는 야심차며, 여러분이 Swift로 무엇을 만들어낼지 기대됩니다!
 
 <!--
 This source file is part of the Swift.org open source project
