@@ -1,47 +1,37 @@
-# Version Compatibility
+# 버전 호환성
 
-Learn what functionality is available in older language modes.
+이전 언어 모드에서 사용할 수 있는 기능을 알아보기.
 
-This book describes Swift 6,
-the default version of Swift that's included in Xcode 16.
-You can use the Swift 6 compiler to build code
-that's written in Swift 6, Swift 5, Swift 4.2, or Swift 4.
+이 문서는 **Swift 6**에 대해 설명하며, 이는 **Xcode 16**에 포함된 기본 Swift 버전입니다.  
+Swift 6 컴파일러를 사용하면 **Swift 6, Swift 5, Swift 4.2, Swift 4**로 작성된 코드를 빌드할 수 있습니다.
 
-When you use the Swift 6 compiler
-to build code that uses the Swift 5 language mode,
-you can use the new features from Swift 6 ---
-they're enabled either by default or by an upcoming feature flag.
-However, to enable strict concurrency checking,
-you need to upgrade to the Swift 6 language mode.
+Swift 6 컴파일러를 사용하여 **Swift 5 언어 모드**로 코드를 빌드할 경우,  
+Swift 6의 새로운 기능을 일부 활용할 수 있습니다.  
+이 기능들은 기본적으로 활성화되어 있거나, 향후 기능 플래그를 통해 사용할 수 있습니다.  
+그러나 **엄격한 동시성 검사(strict concurrency checking)** 를 활성화하려면 **Swift 6 언어 모드**로 업그레이드해야 합니다.
 
-In addition,
-when you use Xcode 15.3 to build Swift 4 and Swift 4.2 code,
-most Swift 5 functionality is still available.
-That said,
-the following changes are available only to code
-that uses the Swift 5 language mode:
+추가적으로, **Xcode 15.3**을 사용하여 **Swift 4 및 Swift 4.2** 코드를 빌드할 경우,  
+대부분의 **Swift 5 기능**을 여전히 사용할 수 있습니다.  
+하지만, 다음과 같은 변경 사항은 **Swift 5 언어 모드**에서만 적용됩니다.  
 
-- Functions that return an opaque type require the Swift 5.1 runtime.
-- The `try?` expression doesn't introduce an extra level of optionality
-  to expressions that already return optionals.
-- Large integer literal initialization expressions are inferred
-  to be of the correct integer type.
-  For example, `UInt64(0xffff_ffff_ffff_ffff)` evaluates to the correct value
-  rather than overflowing.
+- **불투명 반환 타입(opaque type)** 을 반환하는 함수는 **Swift 5.1 런타임**이 필요합니다.  
+- `try?` 표현식은 이미 옵셔널을 반환하는 경우, **추가적인 옵셔널 레벨을 생성하지 않습니다**.  
+- **큰 정수 literal(리터럴) 초기화 표현식**이 올바른 정수 타입으로 자동 추론됩니다.  
+  예를 들어, `UInt64(0xffff_ffff_ffff_ffff)`는 올바르게 평가되며 **오버플로우되지 않습니다**.
 
-Concurrency requires the Swift 5 language mode
-and a version of the Swift standard library
-that provides the corresponding concurrency types.
-On Apple platforms, set a deployment target
-of at least iOS 13, macOS 10.15, tvOS 13, watchOS 6, or visionOS 1.
+또한, **동시성(Concurrency)** 기능을 사용하려면 **Swift 5 언어 모드**가 필요하며,  
+해당 동시성 타입을 제공하는 **Swift 표준 라이브러리 버전**이 있어야 합니다.  
+Apple 플랫폼에서는 다음 최소 **배포 대상(deployment target)** 을 설정해야 합니다.  
 
-A target written in Swift 6 can depend on
-a target that's written in Swift 5, Swift 4.2 or Swift 4,
-and vice versa.
-This means, if you have a large project
-that's divided into multiple frameworks,
-you can migrate your code to a newer language version
-one framework at a time.
+- **iOS 13** 이상  
+- **macOS 10.15** 이상  
+- **tvOS 13** 이상  
+- **watchOS 6** 이상  
+- **visionOS 1** 이상
+
+Swift 6로 작성된 대상(Target)은 **Swift 5, Swift 4.2, Swift 4**로 작성된 대상과 **상호 의존 가능** 합니다.  
+즉, 대규모 프로젝트에서 여러 개의 프레임워크를 사용하고 있다면,  
+한 번에 **하나의 프레임워크씩** 새 언어 버전으로 점진적으로 마이그레이션할 수 있습니다.
 
 <!--
 This source file is part of the Swift.org open source project
