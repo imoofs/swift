@@ -1,10 +1,9 @@
-# A Swift Tour
+# Swift 둘러보기
 
-Explore the features and syntax of Swift.
+Swift의 기능과 문법을 탐색하기.
 
-Tradition suggests that the first program in a new language
-should print the words “Hello, world!” on the screen.
-In Swift, this can be done in a single line:
+전통적으로 새로운 언어에서 작성하는 첫 번째 프로그램은 화면에 "Hello, world!"를 출력하는 것입니다.
+Swift에서는 단 한 줄로 이를 구현할 수 있습니다:
 
 <!--
   K&R uses “hello, world”.
@@ -25,31 +24,23 @@ print("Hello, world!")
   ```
 -->
 
-This syntax should look familiar if you know another language ---
-in Swift, this line of code is a complete program.
-You don't need to import a separate library for functionality like
-outputting text or handling strings.
-Code written at global scope is used
-as the entry point for the program,
-so you don't need a `main()` function.
-You also don't need to write semicolons
-at the end of every statement.
+다른 프로그래밍 언어를 알고 있다면 이 문법이 익숙하게 느껴질 것입니다 ---
+Swift에서는 이 한 줄의 코드가 완전한 프로그램이 됩니다.
+텍스트를 출력하거나 문자열을 다루는 기능을 사용하기 위해 별도의 라이브러리를 가져올 필요가 없습니다.
+전역 범위에서 작성된 코드는 프로그램의 진입점(entry point)으로 사용되므로, `main()` 함수를 정의할 필요도 없습니다.
+또한, 문장 끝에 세미콜론을 작성할 필요도 없습니다.
 
-This tour gives you enough information
-to start writing code in Swift
-by showing you how to accomplish a variety of programming tasks.
-Don’t worry if you don’t understand something ---
-everything introduced in this tour
-is explained in detail in the rest of this book.
+둘러보기에서는 Swift에서 다양한 프로그래밍 작업을 수행하는 방법을 보여줌으로써 코딩을 시작하는 데 필요한 정보를 제공합니다.
+만약 이해가 되지 않는 부분이 있더라도 걱정하지 마세요. 이 투어에서 소개된 모든 내용은 이 책의 나머지 부분에서 자세히 설명됩니다.
 
-## Simple Values
+둘러보기에서는 Swift에서 다양한 프로그래밍 작업을 수행하는 방법을 보여줌으로써 코딩을 시작하는 데 필요한 정보를 제공합니다.
+만약 이해가 되지 않는 부분이 있더라도 걱정하지 마세요. 이 투어에서 소개된 모든 내용은 이 책의 나머지 부분에서 자세히 설명됩니다.
 
-Use `let` to make a constant and `var` to make a variable.
-The value of a constant
-doesn't need to be known at compile time,
-but you must assign it a value exactly once.
-This means you can use constants to name a value
-that you determine once but use in many places.
+## 간단한 변수(Simple Values)
+
+Swift에서는 'let'을 사용하여 상수(constant)를 선언하고, 'var'을 사용하여 변수(variable)를 만듭니다.
+상수의 값은 컴파일 시점에 반드시 알아야 하는 것은 아니지만, 한 번 할당된 후에는 변경할 수 없습니다.
+이 특징을 이용하면 한 번 정한 값을 여러 곳에서 사용할 수 있도록 이름을 붙일 수 있습니다.
 
 ```swift
 var myVariable = 42
@@ -67,19 +58,12 @@ let myConstant = 42
   ```
 -->
 
-A constant or variable must have the same type
-as the value you want to assign to it.
-However, you don't always have to write the type explicitly.
-Providing a value when you create a constant or variable
-lets the compiler infer its type.
-In the example above,
-the compiler infers that `myVariable` is an integer
-because its initial value is an integer.
+상수나 변수는 할당하려는 값과 같은 타입이어야 합니다. 하지만 Swift에서는 타입을 명시적으로 작성하지 않아도 됩니다.
+상수나 변수를 선언할 때 값을 제공하면, 컴파일러가 자동으로 타입을 추론합니다.
+위의 예제에서 'myVariable'은 정수 값을 가졌으므로, 컴파일러는 Int 타입으로 추론합니다.
 
-If the initial value doesn't provide enough information
-(or if there isn't an initial value),
-specify the type by writing it after the variable,
-separated by a colon.
+초기 값만으로는 타입을 명확히 추론할 수 없거나 초기 값을 제공하지 않는 경우,
+변수명 뒤에 콜론(:)을 붙여 명시적으로 타입을 지정할 수 있습니다.
 
 ```swift
 let implicitInteger = 70
@@ -97,12 +81,10 @@ let explicitDouble: Double = 70
   ```
 -->
 
-> Experiment: Create a constant with
-> an explicit type of `Float` and a value of `4`.
+> 실습: `Float`타입의 상수를 만들고, 상수값으로 `4`를 할당해 보세요.
 
-Values are never implicitly converted to another type.
-If you need to convert a value to a different type,
-explicitly make an instance of the desired type.
+Swift에서는 값이 자동으로 다른 타입으로 변환되지 않습니다.
+변수값을 다른 타입으로 변환해야 할 경우, 명시적으로 원하는 타입을 지정해야 합니다.
 
 ```swift
 let label = "The width is "
@@ -122,8 +104,8 @@ let widthLabel = label + String(width)
   ```
 -->
 
-> Experiment: Try removing the conversion to `String` from the last line.
-> What error do you get?
+> 실습: 마지막 줄에서 `String`변환을 제거해 보세요.
+> 어떤 오류가 발생하나요?
 
 <!--
   TODO: Discuss with Core Writers ---
@@ -131,9 +113,9 @@ let widthLabel = label + String(width)
   helping you learn something?
 -->
 
-There's an even simpler way to include values in strings:
-Write the value in parentheses,
-and write a backslash (`\`) before the parentheses.
+변수값을 문자열에 포함하는 더 간단한 방법이 있습니다:
+역슬래시`\` 다음에 괄호`()`를 사용하여 변수값을 문자열 안에 직접 포함할 수 있습니다.
+
 For example:
 
 ```swift
