@@ -116,7 +116,7 @@ let widthLabel = label + String(width)
 변수값을 문자열에 포함하는 더 간단한 방법이 있습니다:
 역슬래시`\` 다음에 괄호`()`를 사용하여 변수값을 문자열 안에 직접 포함할 수 있습니다.
 
-For example:
+예:
 
 ```swift
 let apples = 3
@@ -140,15 +140,13 @@ let fruitSummary = "I have \(apples + oranges) pieces of fruit."
   ```
 -->
 
-> Experiment: Use `\()` to
-> include a floating-point calculation in a string
-> and to include someone’s name in a greeting.
+> 실습: `\()`를 사용하여 부동소수점 연산 결과를 문자열에 포함하거나,
+> 사람의 이름을 포함한 인사말을 만들어 보세요.
 
-Use three double quotation marks (`"""`) for strings
-that take up multiple lines.
-Indentation at the start of each quoted line is removed,
-as long as it matches the indentation of the closing quotation marks.
-For example:
+여러 줄에 걸친 문자열을 작성할 때는 세 개의 따옴표(`"""`)를 사용합니다.
+각 줄의 들여쓰기는 마지막 따옴표에서 자동으로 제거됩니다.
+
+예:
 
 ```swift
 let quotation = """
@@ -177,10 +175,9 @@ let quotation = """
   <rdar://problem/49129068> Swift code formatting damages indentation
 -->
 
-Create arrays and dictionaries using brackets (`[]`),
-and access their elements by writing
-the index or key in brackets.
-A comma is allowed after the last element.
+Swift에서는 배열(array)과 딕셔너리(dictionary)를 대괄호(`[]`)를 사용하여 생성합니다.
+배열값(elements)에 접근할 때도 대괄호 안에 인덱스(배열의 경우) 또는 키(딕셔너리의 경우)를 넣으면 됩니다.
+마지막 배열값 뒤에 쉼표(,)를 추가하는 것도 가능합니다.
 
 <!--
   REFERENCE
@@ -248,7 +245,7 @@ occupations["Jayne"] = "Public Relations"
 
 <!-- Apple Books screenshot begins here. -->
 
-Arrays automatically grow as you add elements.
+배열은 배열값를 추가하면 자동으로 크기가 증가합니다.
 
 ```swift
 fruits.append("blueberries")
@@ -266,9 +263,8 @@ print(fruits)
   ```
 -->
 
-You also use brackets to write an empty array or dictionary.
-For an array, write `[]`,
-and for a dictionary, write `[:]`.
+대괄호(`[]`)를 사용하여 빈 배열과 딕셔너리 생성할 수 있습니다.
+빈 배열을 만들려면 `[]`, 빈 딕셔너리를 만들려면 `[:]`을 사용합니다.
 
 ```swift
 fruits = []
@@ -284,9 +280,7 @@ occupations = [:]
   ```
 -->
 
-If you're assigning an empty array or dictionary to a new variable,
-or another place where there isn't any type information,
-you need to specify the type.
+새로운 변수에 빈 배열이나 딕셔너리를 할당할 때, 타입 정보를 알 수 없는 경우, 명시적으로 타입을 지정해야 합니다.
 
 ```swift
 let emptyArray: [String] = []
